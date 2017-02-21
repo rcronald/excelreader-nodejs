@@ -4,6 +4,7 @@ var trainDate = new Date("2017-02-01")
 
 var monthTrainPlan = []
 
+var dayOfMonth = 1;
 
 Date.prototype.addDays = function (num) {
     var value = this.valueOf();
@@ -29,18 +30,17 @@ workbook.xlsx.readFile("Ronal Requena.xlsx")
 		    	row.eachCell(function(cell, cellNumber){
 		    		if(cellNumber>1){
 		    			var dayTrainPlan = {}
-		    			
 
+		    			dayTrainPlan.dayOfMonth = dayOfMonth
 		    			dayTrainPlan.date = trainDate
 		    			dayTrainPlan.plan = cell.value
 		    			//console.log('[' + rowNumber + '-' +  cellNumber + '] = ' + JSON.stringify(cell.value))
 
 		    			trainDate = trainDate.addDays(1)
+		    			dayOfMonth++
 
-		    			//console.log(dayTrainPlan)
-
+		    			console.log(dayTrainPlan)
 		    			monthTrainPlan.push(dayTrainPlan)
-		    			console.log(monthTrainPlan)
 		    		}
 		    	})
     		}
