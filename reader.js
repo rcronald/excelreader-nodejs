@@ -13,7 +13,6 @@ Date.prototype.addDays = function (num) {
 }
 
 
-
 // read from a file
 var workbook = new excel.Workbook();
 workbook.xlsx.readFile("Ronal Requena.xlsx")
@@ -41,6 +40,10 @@ workbook.xlsx.readFile("Ronal Requena.xlsx")
 
 		    			console.log(dayTrainPlan)
 		    			monthTrainPlan.push(dayTrainPlan)
+<<<<<<< HEAD
+=======
+		    			//console.log(monthTrainPlan)
+>>>>>>> 80b26f8433f3b92cbb5bd80f70104e9c46a66c54
 		    		}
 		    	})
     		}
